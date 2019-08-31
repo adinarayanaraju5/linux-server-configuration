@@ -11,7 +11,7 @@ This project explains how to secure and set up a Linux distribution on a server,
 - The web application is my [plant Catalog project](https://github.com/adinarayanaraju5/plant_catalog).
 - The database server is [PostgreSQL](https://www.postgresql.org/).
 
-You can visit http://13.127.100.15/ for the deployed plant catalog web app.
+You can visit http://13.127.100.15.xip.io/ for the deployed plant catalog web app.
 
 ## Get a amazon lightsail server
 
