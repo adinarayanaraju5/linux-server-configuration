@@ -150,7 +150,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ## Preparing to deploy the plant catalog project
 
-### Step 9: Configure the local timezone to UTC
+### Step-9: Configure the local timezone to UTC
 
 - While logged in as `grader`, configure the time zone: `sudo dpkg-reconfigure tzdata`. You should see something like that:
 
@@ -162,7 +162,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ```
 
-### Step 10: Install and configure Apache to serve a Python mod_wsgi application
+### Step-10: Install and configure Apache to serve a Python mod_wsgi application
 
 - While logged in as `grader`, install Apache: `sudo apt-get install apache2`.
 - Enter public IP of the Amazon Lightsail instance into browser. If Apache is working, you should see:
@@ -172,7 +172,7 @@ sudo apt-get update && sudo apt-get upgrade
   `sudo apt-get install libapache2-mod-wsgi`.
 - Enable `mod_wsgi` using: `sudo a2enmod wsgi`.
 
-### Step 11: Installing and configuring PostgreSQL
+### Step-11: Installing and configuring PostgreSQL
 
 - While logged in as `grader`, install PostgreSQL:
   `sudo apt-get install postgresql`.
@@ -270,13 +270,13 @@ template1 | postgres | UTF8 | en_US.UTF-8 | en_US.UTF-8 | =c/postgres +
 - Exit psql: `\q`.
 - Switch back to the `grader` user by running: `exit` command.
 
-### Step 12: Installing git version control
+### Step-12: Installing git version control
 
 - While logged in as `grader` user, install `git`: `sudo apt-get install git`.
 
 ## Deploying the plant Catalog project
 
-### Step 13.1: Clone and setup the Item Catalog project from the GitHub repository
+### Step-13: Clone and setup the Item Catalog project from the GitHub repository
 
 - While logged in as `grader`, create `/var/www/catalog/` directory.
 - Change to that directory and clone the catalog project:<br>
@@ -307,7 +307,7 @@ engine = create_engine('postgresql://catalog:PASSWORD@localhost/catalog')
 
 ```
 
-### Step 13.2: Authenticate Google login by changing the javascript origins
+### Step-14: Authenticate Google login by changing the javascript origins
 
 - Go to [Google Cloud Plateform](https://console.cloud.google.com/).
 - Click `APIs & services` on left menu.
@@ -317,7 +317,7 @@ engine = create_engine('postgresql://catalog:PASSWORD@localhost/catalog')
 - Download the corresponding JSON file and copy it.
 - Open `/var/www/catalog/catalog/client_secrets.json` and paste into the this file.
 
-### Step 14.1: Installing the virtual environment and dependencies
+### Step-15: Installing the virtual environment and dependencies
 
 - While logged in as `grader`, install pip: `sudo apt-get install python-pip`.
 - Install the virtual environment: `sudo apt-get install python-virtualenv`
@@ -343,7 +343,7 @@ pip install -r requirements.txt
 
 - Deactivate the virtual environment: `deactivate`.
 
-### Step 14.2: Set up and enable the virtual0 host
+### Step-16: Set up and enable the virtual0 host
 
 - Add the following line in `/etc/apache2/mods-enabled/wsgi.conf` file
   to use Python.
@@ -391,7 +391,7 @@ service apache2 reload
 
 - Reload Apache: `sudo service apache2 reload`.
 
-### Step 14.3: Set up the Flask application
+### Step-17: Set up the Flask application
 
 - Create `/var/www/catalog/catalog.wsgi` file add the following lines:
 
@@ -415,7 +415,7 @@ service apache2 reload
 
 - Restart Apache: `sudo service apache2 restart`.
 
-### Step 14.4: Set up the database schema and populate the database
+### Step-18: Set up the database schema and populate the database
 
 - Edit `/var/www/catalog/catalog/plant_data.py`.
 - Add the these two lines at the beginning of the file.
@@ -438,7 +438,7 @@ session.query(User).delete()
 - Run: `python plant_data.py`.
 - Deactivate the virtual environment: `deactivate`.
 
-### Step 14.5: Disable the default Apache site
+### Step-19: Disable the default Apache site
 
 - Disable the default Apache site: `sudo a2dissite 000-default.conf`.
   The following prompt will be returned:
@@ -453,7 +453,7 @@ service apache2 reload
 
 - Reload Apache: `sudo service apache2 reload`.
 
-### Step 14.6: Launch the Web Application
+### Step-20: Launch the Web Application
 
 - Change the ownership of the project directories: `sudo chown -R www-data:www-data catalog/`.
 - Restart Apache again: `sudo service apache2 restart`.
