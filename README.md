@@ -457,7 +457,7 @@ service apache2 reload
 
 - Change the ownership of the project directories: `sudo chown -R www-data:www-data catalog/`.
 - Restart Apache again: `sudo service apache2 restart`.
-- Open your browser to http://13.59.39.163.xip.io
+- Open your browser to http://13.127.100.15.xip.io
 
 ## Useful commands
 
