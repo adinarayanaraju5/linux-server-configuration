@@ -480,8 +480,3 @@ service apache2 reload
 - [Create a Python 3 virtual environment](https://superuser.com/questions/1039369/create-a-python-3-virtual-environment).
 - Flask documentation, [Working with Virtual Environments](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/#working-with-virtual-environments)
 - DigitalOcean [How To Deploy a Flask Application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
-- GitHub Repositories
-- [adityamehra/udacity-linux-server-configuration](https://github.com/adityamehra/udacity-linux-server-configuration)
-- [anumsh/Linux-Server-Configuration](https://github.com/anumsh/Linux-Server-Configuration)
-- [bencam/linux-server-configuration](https://github.com/bencam/linux-server-configuration)
-- [iliketomatoes/linux_server_configuration](https://github.com/iliketomatoes/linux_server_configuration).
