@@ -343,7 +343,7 @@ pip install -r requirements.txt
 
 - Deactivate the virtual environment: `deactivate`.
 
-### Step-16: Set up and enable the virtual0 host
+### Step-16: Set up and enable the virtual host
 
 - Add the following line in `/etc/apache2/mods-enabled/wsgi.conf` file
   to use Python.
